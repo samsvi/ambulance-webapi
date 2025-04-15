@@ -62,6 +62,7 @@ ENV AMBULANCE_API_MONGODB_TIMEOUT_SECONDS=5
 COPY --from=build /app/ambulance-webapi-srv ./
 
 # Actual port may be changed during runtime
-# Default using for the simple case scenario.
+# Default using for the simple case scenario
+# when the service is running on the same host as the client
 EXPOSE 8080
 ENTRYPOINT ["./ambulance-webapi-srv"]
